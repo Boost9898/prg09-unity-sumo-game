@@ -6,6 +6,7 @@ public class RotateCamera : MonoBehaviour
 {
     [SerializeField]// makes private field editable in inspector
     private float rotationSpeed = 25;
+    public Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -20,5 +21,7 @@ public class RotateCamera : MonoBehaviour
 
         transform.Rotate(Vector3.up, horizontalInput * rotationSpeed * Time.deltaTime);
         // deltatime = amount of secs, realtime shizzle
+
+        transform.position = new Vector3(player.position.x, player.position.y, player.position.z);
     }
 }

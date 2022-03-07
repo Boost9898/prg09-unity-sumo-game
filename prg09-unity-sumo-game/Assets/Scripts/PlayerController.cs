@@ -6,8 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
     private GameObject focalPoint;
-    public float speed = 3.0f;
-
+    public float speed = 4.0f;
+    private float powerUpStrength = 6;
+    public bool hasPowerup = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,36 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float forwardInput = Input.GetAxis("Vertical");
-
         playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Powerup"))
+        {
+            hasPowerup = true;
+            Destroy(other.gameObject);
+            StartCoroutine(PowerupCountdownRoutine());
+        }
+    }
+
+    // this is a kind of interface, coroutines
+    IEnumerator PowerupCountdownRoutine()
+    {
+        yield return new WaitForSeconds(8);
+        hasPowerup = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy") && hasPowerup)
+        {
+            Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
+
+            enemyRigidbody.AddForce(awayFromPlayer * powerUpStrength, ForceMode.Impulse);
+            Debug.Log("Collided with: " + collision.gameObject.name + "with popwerup set to " + hasPowerup);
+
+        }
     }
 }
