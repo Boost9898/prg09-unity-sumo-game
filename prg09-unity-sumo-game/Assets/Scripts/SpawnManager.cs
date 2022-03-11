@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class SpawnManager : MonoBehaviour
     private float spawnRange = 11.0f;
     public int enemyCount;
     public int waveNumber = 1;
+    public int puntjes = 0;
+    public Text puntjesText;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,8 @@ public class SpawnManager : MonoBehaviour
         if(enemyCount == 0)
         {
             waveNumber++;
+            puntjes++;
+            puntjesText.text = "PUNTJES: " + puntjes;
             SpawnEnemyWave(waveNumber);
             Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
         }
