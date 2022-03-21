@@ -29,3 +29,6 @@ public class Enemy : MonoBehaviour
         }
     }
 }
+
+
+// factory design pattern

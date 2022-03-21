@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{7E6441A7-E3A4-B668-F95B-6FB4A2DF80C4}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpawnManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RotateCamera.cs">
     <Files>
-      <File FileName="Assets/Scripts/SpawnManager.cs" Line="57" Column="1" />
-      <File FileName="Assets/Scripts/RotateCamera.cs" Line="25" Column="78" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="13" Column="1" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="28" Column="33" />
-      <File FileName="Assets/Scripts/Goal.cs" Line="15" Column="1" />
+      <File FileName="Assets/Scripts/RotateCamera.cs" Line="19" Column="6" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="24" Column="1" />
+      <File FileName="Assets/Scripts/SpawnManager.cs" Line="36" Column="1" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="34" Column="26" />
+      <File FileName="Assets/Scripts/Goal.cs" Line="11" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +13,7 @@
           <Node name="prg09-unity-sumo-game" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="SpawnManager.cs" selected="True" />
+                <Node name="RotateCamera.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f73aede6-61ad-4216-80bc-aec393b59c60" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2494e05a-5d00-4bdc-ac48-7bfe6bb85dd5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
